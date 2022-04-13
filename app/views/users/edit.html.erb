@@ -1,0 +1,12 @@
+
+<%=form_with(model: @user) do |f|%>
+<% if @user.errors.any? %>
+<% @user.errors.full_messages.each do |message| %>
+<div><%=message%></div>
+<%end%>
+<%end%>
+<%= render :partial => "form", :locals=>{:f => f } %>
+<%=submit_tag "Update User"%>
+<%end%>
+<%=link_to "View User", action: :show%>
+<%=link_to "Back to Users", action: :index%>

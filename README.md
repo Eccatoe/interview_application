@@ -7,11 +7,11 @@ Build a new rails application using whatever version you like. It should have at
     *  delete
 *  following fields: 
     *  should have a `full_name` method that returns the user’s full name
-    *  first_name,
-    *  last_name,
-    *  email,
-    *  city,
-    *  state,
+    *  first_name
+    *  last_name
+    *  email
+    *  city
+    *  state
     *  score
         * should be a numeric field 
         * not allow letters to be saved

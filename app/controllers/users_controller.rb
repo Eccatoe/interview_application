@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
     def index
         @users=User.all
+        Rails.logger.info 'Index view accessed'
+
     end
     def show
         @user=User.find(params[:id])
@@ -9,8 +11,12 @@ class UsersController < ApplicationController
         @user=User.new
     end
     def create
-        @user=User.create(user_params)
-        redirect_to users_path
+        @user = User.new(user_params)
+        if @user.save
+            redirect_to user_path(@user)
+        else
+            render :new, status: 422
+        end
     end
     def edit
         @user=User.find(params[:id])
@@ -18,6 +24,11 @@ class UsersController < ApplicationController
     def update
         @user=User.find(params[:id])
         @user.update(user_params)
+        if @user.save
+            redirect_to user_path(@user)
+        else
+            render :edit, status: 422
+        end
     end
     def destroy
         @user=User.find(params[:id])

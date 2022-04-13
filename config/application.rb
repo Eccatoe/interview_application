@@ -9,7 +9,9 @@ Bundler.require(*Rails.groups)
 module PriviaHealth
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.0
+    config.load_defaults 6.1
+    config.logger = Logger.new('log/important.log')
+    config.log_level = :warn
 
     # Configuration for the application, engines, and railties goes here.
     #
