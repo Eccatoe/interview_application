@@ -5,7 +5,9 @@ class User < ApplicationRecord
     validates :city, presence: true
     validates :state, presence: true
     validates :score, numericality: true
+
     def full_name
         [first_name, last_name].join(" ")
     end
+    
 end

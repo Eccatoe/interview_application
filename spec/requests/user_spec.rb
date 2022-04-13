@@ -4,22 +4,13 @@ RSpec.describe "Users", type: :request do
 
   before(:each) do
     @valid_user = User.create(
-   
       first_name: 'Aida',
-      last_name:  'Buckridge',
-      email:  'tambra@harber.co',
-      city:  'Port Evetteborough',
-      state:  'Indiana',
+      last_name: 'Buckridge',
+      email: 'tambra@harber.co',
+      city: 'Port Evetteborough',
+      state: 'Indiana',
       score: 3)
-  end
-  # @@valid_user= User.first_or_create(
-  # id:  1,
-  # first_name: 'Aida',
-  # last_name:  'Buckridge',
-  # email:  'tambra@harber.co',
-  # city:  'Port Evetteborough',
-  # state:  'Indiana',
-  # score: 3)
+    end
 
   describe "GET /index" do
     it 'render all users' do
@@ -29,7 +20,6 @@ RSpec.describe "Users", type: :request do
   end
   describe 'GET /show' do
     it 'renders a single user' do
-    # user=User.create(@valid_attributes)
     get user_path(@valid_user)
     expect(response).to have_http_status(200)
     end
@@ -42,7 +32,6 @@ RSpec.describe "Users", type: :request do
   end
   describe 'GET /edit' do
     it 'renders a form to edit a user' do
-    # user=User.create(valid_attributes)
     get edit_user_path(@valid_user)
     expect(response).to have_http_status(200)
     end
