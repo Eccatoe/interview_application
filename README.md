@@ -1,9 +1,9 @@
 Build a new rails application using whatever version you like. It should have at least 1 model
 *  User, and the ability to
-    *  list, √
-    *  show, √
-    *  create,
-    *  update, 
+    *  list
+    *  show
+    *  create
+    *  update
     *  delete
 *  following fields: 
     *  should have a `full_name` method that returns the user’s full name
@@ -20,4 +20,4 @@ Build a new rails application using whatever version you like. It should have at
             * incorrect fields
 * There should be tests for the controller and the model.
 * No authentication is required
-* views should be HTML, not JSON# interview_application
+* views should be HTML, not JSON
