@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   it 'returns user full name' do
     user=User.create(first_name: 'Aida', last_name:  'Buckridge')
-    expect(user.full_name)to eq 'Aida Buckridge'
+    expect(user.full_name).to eq 'Aida Buckridge'
   end
   it 'has a first name' do
     user=User.create(
@@ -50,7 +50,6 @@ RSpec.describe User, type: :model do
       first_name: 'Aida',
       last_name:  'Buckridge',
       email:  'tambra@harber.co',
-      city:  'Port Evetteborough',
       state:  'Indiana',
       score: 3
     )
@@ -77,10 +76,11 @@ RSpec.describe User, type: :model do
       first_name: 'Aida',
       last_name:  'Buckridge',
       email:  'tambra@harber.co',
-      city:  'Port Evetteborough'
+      city:  'Port Evetteborough',
+      state:  'Indiana',
     )
     expect(user).to_not be_valid
-    user.score:3
+    user.score=3
     expect(user).to be_valid
   end
 
