@@ -8,7 +8,7 @@ RSpec.describe "Users", type: :request do
       'last_name'=> 'Buckridge',
       'email'=> 'tambra@harber.co',
       'city'=> 'Port Evetteborough',
-      'city'=> 'Indiana',
+      'state'=> 'Indiana',
       'score'=>3
     }
   # let(:invalid_attributes) do 
@@ -18,7 +18,7 @@ RSpec.describe "Users", type: :request do
   #     'last_name'=> 'Buckridge',
   #     'email'=> 'tambra@harber.co',
   #     'city'=> 'Port Evetteborough',
-  #     'city'=> 'Indiana',
+  #     'state'=> 'Indiana',
   #     'score'=>3
   #   }
   end
